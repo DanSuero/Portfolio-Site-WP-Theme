@@ -1,0 +1,281 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body{ overflow-x: hidden; }
+
+*{
+  font-family: 'Hind Madurai';
+}
+
+.h2{
+  &-alt{
+    color: #4C5B5C;
+    font:{
+      family: 'Lora';
+      weight: 600;
+    }
+  }
+}
+
+
+.navbar {
+  min-height: 75px;
+  border: {
+    bottom: solid #A3D5E0 1px;
+  }
+}
+
+.logo-altcolor {
+  color: $altcolor;
+}
+
+.navbar-brand{
+  color: $altwhite !important;
+  font:{
+    family: "Montserrat", san-serif;
+    size: 28px;
+    weight: 800;
+  }
+}
+
+.nav-item{
+  a.nav-link{
+    position: relative;
+    color: $altwhite !important;
+    font:{
+      family: "Montserrat", san-serif;
+      size: 14px;
+      weight: 800;
+    }
+    text-transform: uppercase;
+    &::after{
+      content: "";
+      background-color: $altcolor;
+      height: 4px;
+      left: 50%;
+      width: 0;
+      bottom: 4px;
+      transition: all 0.3s ease;
+      position: absolute;
+    }
+    &:hover:after{
+      left: 0;
+      width: 100%;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.home-hero{
+  min-height: 330px;
+  position: relative;
+  //overflow: hidden;
+  > div{
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+  }
+  h1{
+    font:{
+      family: 'Montserrat', san-serif;
+      size: 48px;
+      weight: 800;
+    }
+  }
+  h2{
+    font:{
+      family: 'Lora', serif;
+      size: 18px;
+      weight: bold;
+    }
+  }
+  &::after{
+    content: "";
+    width: 0;
+    height: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    position: absolute;
+    margin: 0 auto -50px;
+    border:{
+      left: 1920px solid transparent;
+      right: 0px solid transparent;
+      top: 50px solid $primary;
+    }
+  }
+}
+
+.btn-one{
+  font:{
+    size: 18px;
+    family: 'Montserrat', san-serif;
+    weight: 500;
+  };
+  position: relative;
+  transition: all 0.2s easeinout;
+  &:hover{
+    color: $altwhite !important;
+    border-color: $primary !important;
+    background-color: $primary;
+  }
+}
+
+p,li{
+  font: {
+    family: 'Hind Madurai', san-serif;
+    size: 18px;
+    weight: 100;
+  };
+}
+
+.headers{
+  font:{
+    family: "Montserrat", san-serif;
+    size: 34px;
+    weight: 700;
+  };
+  text-transform: uppercase;
+}
+
+.header-one{
+  @extend .headers;
+  color: $header-one;
+}
+.header-two{
+  @extend .headers;
+  color: $primary;
+}
+
+ul{
+  list-style: none;
+}
+#WebServices li::before{
+  color: $header-one; content: '\f054'; font-family: 'FontAwesome'; margin-left: -20px; margin-right: 10px;
+}
+
+.blockquote{
+  font:{
+    family: "Lora", serif;
+    size: 18px;
+    weight: 100;
+    style: italic;
+  };
+  &-footer{
+    color: #000;
+    font:{
+      family: "Hind Madurai", san-serif;
+      size: 18px;
+      weight: 600;
+    };
+  }
+}
+
+.carousel-control{
+  &-next{
+    background: none;
+    &::after{
+      color: $header-one;
+      content: "\f0da";
+      font:{
+        family: 'FontAwesome';
+        size: 72px;
+      }
+      position: absolute;
+    }
+  }
+  &-prev{
+    background: none;
+    &::after{
+      color: $header-one;
+      content: "\f0d9";
+      font:{
+        family: 'FontAwesome';
+        size: 72px;
+      }
+      position: absolute;
+    }
+  }
+}
+
+.carousel-inner{
+  min-height: 232px;
+}
+a {
+  color: $altcolor;
+  i{
+    font:{
+      size: 18px !important;
+    }
+  }
+}
+
+footer {
+  position: relative;
+  &.site-footer::before{
+    content: "";
+    width: 0;
+    height: 0;
+    left:0;
+    right:0;
+    top:0;
+    position: absolute;
+    margin: -50px auto 0px;
+    border:{
+      left: 1920px solid transparent;
+      right: 0px solid transparent;
+      bottom: 50px solid $primary;
+    }
+  }
+
+  a {
+    color: $altwhite;
+    font:{
+      size: 18px;
+      family: "Hind Madurai";
+    }
+    > i {
+      color: $header-one;
+    }
+    &:hover i{
+      color: $altdark;
+    }
+  }
+}
+
+.bottom-footer{
+  min-height: 50px;
+  padding: 13px;
+  font:{
+    family: "Hind Madurai";
+    size:18px;
+  }
+}
+
+//for foo gallery
+$foocolor: #E3655B;
+$foocolorhover: #4C5B5C;
+
+.foogallery.fg-dark .fg-item-inner{
+ background-color: $foocolor !important;
+ border-color: $foocolor !important;
+ box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3)!important;
+ transition: all 0.2s ease;
+
+ .fg-caption-title{
+   font-weight: 900;
+   padding-bottom: 0;
+   padding-top: 0;
+ }
+
+ &:hover{
+   background-color: $foocolorhover !important;
+   border-color: $foocolorhover !important;
+   //transition: all 0.2s ease;
+ }
+}
+
+.fg-caption-desc{
+  color: $altwhite;
+}
